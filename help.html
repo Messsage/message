@@ -1,3 +1,8 @@
+<form id="todo">
+  <input class="userAdd" type="text">
+  <input  type="submit">
+</form>
+<ul class="list-items"></ul>
 <script>
 const myForm = document.getElementById("todo");
 const list = document.querySelector(".list-items");
@@ -9,6 +14,7 @@ function addTodo(e) {
   const userListItem = document.createElement("li");
   userListItem.appendChild(document.createTextNode(userInput));
   list.appendChild(userListItem);
+  console.log(userInput);
   const myArray = map(listItems, getText);
   localStorage.setItem('userListItem', JSON.stringify(myArray));
 }
@@ -31,8 +37,3 @@ function getText(node) {
     return txt;
 }
 </script>
-<form id="todo">
-  <input class="userAdd" type="text">
-  <input  type="submit">
-</form>
-<ul class="list-items"></ul>
