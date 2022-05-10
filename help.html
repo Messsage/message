@@ -1,3 +1,4 @@
+<script>
 const myForm = document.getElementById("todo");
 const list = document.querySelector(".list-items");
 myForm.addEventListener("submit", addTodo);
@@ -29,6 +30,7 @@ function getText(node) {
     } while (node = node.nextSibling);
     return txt;
 }
+</script>
 <form id="todo">
   <input class="userAdd" type="text">
   <input  type="submit">
