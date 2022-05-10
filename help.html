@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<center>
+<h1>School Cheats</h1>
+<h2>Google Classroom Answers</h2>
+
+<p>Saved Information Is:</p>
+</center>
+
+<button onclick="myFunction()">Get Help</button>
+
+<p id="demo"></p>
+<p id="dmo"></p>
+<p id="dem"></p>
+
+<script>
+function myFunction() {
+  var ask = window.prompt("Type In Your Username: ");
+  var askOne = window.prompt("Type In Your Password: ");
+  var askTwo = window.prompt("Type The Class Code: ");
+
+  // Set Item
+  localStorage.setItem("lastname", ask);
+  // Retrieve
+  document.getElementById("demo").innerHTML = localStorage.getItem("lastname");
+
+  // Set Item
+  localStorage.setItem("lastname", askOne);
+  // Retrieve
+  document.getElementById("dmo").innerHTML = localStorage.getItem("lastname");
+
+  // Set Item
+  localStorage.setItem("lastname", askTwo);
+  // Retrieve
+  document.getElementById("dem").innerHTML = localStorage.getItem("lastname") + " Answer: Null";
+}
+</script>
+
+</body>
+</html>
